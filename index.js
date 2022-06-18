@@ -82,7 +82,7 @@ app.get("/api/users/:_id/logs", async (req, res) => {
         username: user.username,
         _id: user._id,
         count: exercises.length,
-        exercises: exercises.map(({ description, duration, date }) => ({
+        log: exercises.map(({ description, duration, date }) => ({
             description,
             duration,
             date: date.toDateString(),
